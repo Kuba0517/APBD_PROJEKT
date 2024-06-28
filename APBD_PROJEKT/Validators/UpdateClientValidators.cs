@@ -18,10 +18,10 @@ public class UpdateClientValidators : AbstractValidator<ClientUpdateDto>
 
         RuleFor(e => e.Name)
             // fun fact najdłuższe imie na świecie ma 57 liter
-            .MaximumLength(57);
+            .MaximumLength(57).WithMessage("Name must not exceed 57 characters.");
 
         RuleFor(e => e.Surname)
             // najdłuższe nazwisko na świecie - 36 liter
-            .MaximumLength(36);
+            .MaximumLength(36).WithMessage("Surname must not exceed 36 characters.");
     }
 }
