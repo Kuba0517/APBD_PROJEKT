@@ -12,12 +12,15 @@ public class Software
     public int SoftwareId { get; set; }
     
     [Column("name")]
+    [MaxLength(128)]
     public string Name { get; set; }
 
     [Column("description")]
+    [MaxLength(255)]
     public string Description { get; set; }
 
     [Column("current_version")]
+    [MaxLength(50)]
     public string CurrentVersion { get; set; }
     
     [Column("software_type")]

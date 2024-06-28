@@ -40,6 +40,7 @@ public class Contract
     public Discount? Discount { get; set; }
 
     [Column("software_version")]
+    [StringLength(50)]
     public string SoftwareVersion { get; set; }
 
     [Column("is_signed")]

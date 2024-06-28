@@ -29,7 +29,9 @@ public class CreateClientValidators: AbstractValidator<ClientRequestModel>
         When(client => !string.IsNullOrEmpty(client.CompanyName) && !string.IsNullOrEmpty(client.Krs), () =>
         {
             RuleFor(e => e.CompanyName)
-                .NotEmpty().WithMessage("Company name is required.");
+                .NotEmpty().WithMessage("Company name is required.")
+                .MaximumLength(255).WithMessage("Maximum CompanyName length is 255");
+            
             RuleFor(e => e.Krs)
                 .NotEmpty().WithMessage("KRS is required.")
                 .Matches(@"^\d{10}$").WithMessage("KRS must contain exactly 10 digits.");

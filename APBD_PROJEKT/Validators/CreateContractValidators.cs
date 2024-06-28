@@ -15,7 +15,8 @@ public class CreateContractValidators: AbstractValidator<ContractRequestModel>
             .NotEmpty().WithMessage("SoftwareId is required.");
 
         RuleFor(c => c.SoftwareVersion)
-            .NotEmpty().WithMessage("SoftwareVersion is required.");
+            .NotEmpty().WithMessage("SoftwareVersion is required.")
+            .MaximumLength(50).WithMessage("SoftwareVersion must not exceed 50 characters.");
 
         RuleFor(c => c.StartDate)
             .NotEmpty().WithMessage("StartDate is required.")

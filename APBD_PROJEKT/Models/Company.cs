@@ -7,6 +7,7 @@ namespace APBD_PROJEKT.Models;
 public class Company : Client
 {
     [Column("company_name")]
+    [MaxLength(255)]
     public string CompanyName { get; set; }
     
     

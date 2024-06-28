@@ -12,6 +12,7 @@ public class Discount
     public int DiscountId { get; set; }
     
     [Column("name")]
+    [MaxLength(128)]
     public string Name { get; set; }
 
     [Column("type")]

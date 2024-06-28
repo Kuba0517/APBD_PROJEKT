@@ -12,10 +12,12 @@ public abstract class Client
     public int ClientId { get; set; }
     
     [Column("address")]
+    [MaxLength(255)]
     public string Address { get; set; }
     
     [Column("email")]
     [EmailAddress]
+    [MaxLength(128)]
     public string Email { get; set; }
     
     [Column("phone_number")]

@@ -12,6 +12,7 @@ public class User
     public int UserId { get; set; }
 
     [Column("login")]
+    [MaxLength(128)]
     public string Login { get; set; }
 
     [Column("password")]

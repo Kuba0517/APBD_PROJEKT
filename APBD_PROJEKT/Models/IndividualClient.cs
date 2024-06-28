@@ -7,9 +7,11 @@ namespace APBD_PROJEKT.Models;
 public class IndividualClient : Client
 {
     [Column("name")]
+    [MaxLength(57)]
     public string Name { get; set; }
     
     [Column("surname")]
+    [MaxLength(36)]
     public string Surname { get; set; }
     
     [Column("pesel")]
